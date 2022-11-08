@@ -12,9 +12,7 @@ import { convertMinutesToHourString } from "./utils/convert-minutes-to-hours-str
 const app = express()
 
 app.use(express.json())
-app.use(cors({
-    origin: 'http://localhost:3333'
-}))
+app.use(cors())
 
 const prisma  = new PrismaClient({
     log: ['query']
